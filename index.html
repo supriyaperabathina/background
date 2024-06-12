@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="'X-UA-compatible" content="IE-edge">
+        <meta name="'viewport" content="'width-device-width,intial-scale=1.0">
+     <title>js</title>
+    </head>
+    <style>
+            #s
+            {
+               background-color:green;
+               position:relative;
+               left:100px;
+            }
+            #p
+            {
+               position:absolute;
+               top:20%;
+               left:40%;
+            }
+            #assi
+            {
+                height:400px;
+                width:400px;
+            }
+    </style>
+    <body>
+      <div id="p">
+      <img src="C:\Users\PEDADA ASWINI\Downloads\color-rainbow-flower-nature-awesome-Favim.com-543751-modified.png" id="assi">
+      <br>
+      <br>
+      <button id="s">change your fav background</button>
+      </div>
+        <script>
+           function change()
+           {
+            var letters='0123456789ABCDEF';
+            var color='#';
+            for(var i=0;i<6;i++)
+            {
+               var r=Math.floor(Math.random()*16);
+               color=color+letters[r];
+            }
+            document.body.style.backgroundColor=color;
+           }
+           var btn=document.getElementById("s");
+           btn.addEventListener('click',change);
+            </script>
+    </body>
+    </html>
+
